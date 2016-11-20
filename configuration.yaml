@@ -1,0 +1,89 @@
+homeassistant:
+  name: Home
+  latitude: !secret home_lat
+  longitude: !secret home_long
+  elevation: 21
+  unit_system: imperial
+  time_zone: America/New_York
+  customize: !include customize.yaml
+  
+group: !include groups.yaml
+sensor: !include sensors.yaml
+
+frontend:
+updater:
+discovery:
+history:
+logbook:
+sun:
+emulated_hue:
+
+http:
+  api_password: !secret gui_pwd
+
+zwave:
+  usb_path: /dev/ttyUSB0
+
+alarm_control_panel:
+  platform: manual
+  code: !secret alarm_code
+  
+ifttt:
+  key: !secret ifttt_api_key
+
+device_tracker:
+  - platform: owntracks
+    track_new_devices: no
+
+notify:
+  - name: lr_kodi_notify
+    platform: kodi
+    host: http://127.0.0.1
+    
+mqtt:
+  broker: 127.0.0.1
+  port: 1883
+  client_id: home-assistant-1
+  username: !secret mqtt_user
+  password: !secret mqtt_pwd
+
+camera:
+  - platform: generic
+    name: Living Room
+    still_image_url: !secret cam_img_url
+
+    
+    
+media_player:
+  - platform: kodi
+    host: http://127.0.0.1
+    
+switch:
+  #humidifier
+  - platform: tplink
+    host: 192.168.0.102
+  #camera switch
+  - platform: command_line
+    switches:
+     amcrest_cam:
+       command_off: !secret cam_off_cmd
+       command_on: !secret cam_on_cmd
+       value_template: '{{ value == "1" }}'
+    
+light:
+  - platform: limitlessled
+    bridges:
+      - host: 192.168.0.101
+        version: 4
+        groups:
+        - number: 1
+          name: Living Room
+          type: rgbw      
+          
+#zwave motion
+binary_sensor:
+  - platform: template
+    sensors:
+      hall_multi_motion:
+        value_template: "{{ states.sensor.vision_zp3111_multisensor_4in1_burglar_9_10.state > '0' }}"
+        sensor_class: motion
