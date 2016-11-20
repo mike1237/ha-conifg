@@ -1,0 +1,46 @@
+default_view:
+  view: yes
+  entities:
+    #- device_tracker.stephie
+    - device_tracker.pi_md
+    - sensor.hall_multi_temp
+    - sensor.hall_multi_humiditiy
+    - alarm_control_panel.ha_alarm
+    - group.living_room
+    - persistent_notification.invalid_config
+
+mike_devices:
+  entities:
+    - device_tracker.pi_md
+    #- device_tracker.zte_bt
+    
+living_room:
+  name: "Living Room"
+  entities:
+    - camera.living_room
+    - light.ge_dimmer_level_8_0
+    - light.living_room
+    - media_player.kodi
+  
+sensors:
+  name: sensors
+  entities:
+    - sensor.fastcom_download    
+    - sensor.hall_multi_lum
+    - binary_sensor.hall_multi_motion
+    - sun.sun
+
+battery_levels:
+  name: Batteries
+  entities:
+    - sensor.hall_multi_batt
+    - sensor.zte_batt
+    
+misc:
+  name: misc
+  view: yes
+  entities:
+    - group.sensors
+    - group.battery_levels
+    - switch.tplink_switch_hs100
+    - switch.amcrest_cam
