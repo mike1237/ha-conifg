@@ -61,7 +61,7 @@ media_player:
 switch:
   #humidifier
   - platform: tplink
-    host: 192.168.0.102
+    host: 192.168.0.109
   #camera switch
   - platform: command_line
     switches:
