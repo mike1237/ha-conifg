@@ -1,0 +1,57 @@
+light.living_room:
+  emulated_hue_name: "the lights"  
+  friendly_name: "Main Lights"
+  
+light.ge_dimmer_level_8_0:
+  friendly_name: "Desk Lamp"
+  emulated_hue_name: "the lamp"
+  icon: mdi:lamp
+  
+sensor.hall_multi_temp:
+  friendly_name: "Indoor Temp"
+  
+sensor.hall_multi_humiditiy:
+  friendly_name: "Indoor Humidity"
+  
+switch.tplink_switch_hs100:
+  friendly_name: "Humidifier"
+  icon: mdi:water
+
+camera.living_room:
+  friendly_name: "Living Room Cam"
+  
+switch.amcrest_cam:
+  friendly_name: "Camera"
+  icon: mdi:video
+
+#hiding stuff
+binary_sensor.vision_zp3111_multisensor_4in1_sensor_9_0:
+  hidden: true
+  
+sensor.vision_zp3111_multisensor_4in1_alarm_level_9_1:
+  hidden: true
+  
+sensor.vision_zp3111_multisensor_4in1_alarm_type_9_0:
+  hidden: true
+  
+sensor.vision_zp3111_multisensor_4in1_appliance_9_15:
+  hidden: true
+  
+sensor.vision_zp3111_multisensor_4in1_burglar_9_10:
+  hidden: true
+  
+sensor.vision_zp3111_multisensor_4in1_clock_9_14:
+  hidden: true
+  
+sensor.vision_zp3111_multisensor_4in1_luminance_9_3:
+  hidden: true
+  
+sensor.vision_zp3111_multisensor_4in1_relative_humidity_9_5:
+  hidden: true
+  
+sensor.vision_zp3111_multisensor_4in1_sourcenodeid_9_2:
+  hidden: true
+  
+sensor.vision_zp3111_multisensor_4in1_temperature_9_1:
+  hidden: true
+  
