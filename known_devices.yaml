@@ -1,0 +1,12 @@
+pi_md:
+  hide_if_away: false
+  name: Mike
+  picture:
+  track: true
+
+stephie:
+  hide_if_away: false
+  mac: !secret stephie_mac
+  name: Stephie
+  picture:
+  track: true
