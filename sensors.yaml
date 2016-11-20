@@ -45,5 +45,5 @@
       value_template: '{{ states.sensor.vision_zp3111_multisensor_4in1_relative_humidity_9_5.state | int }}'
       unit_of_measurement: '%'
     zte_batt:
-      value_template: '{{ states.device_tracker.pi_md.attributes.battery_level }}'
+      value_template: '{{ states.device_tracker.pi_md.attributes.battery }}'
       unit_of_measurement: '%'
