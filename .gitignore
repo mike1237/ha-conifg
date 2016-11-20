@@ -1,1 +1,10 @@
 secrets.yaml
+.HA_VERSION
+.uuid
+pyozw.sqlite
+home-assistant_v2.db
+home-assistant.log
+zwscene.xml
+zwcfg_0x01850385.xml
+OZW_Log.txt
+deps/
