@@ -1,0 +1,14 @@
+- start_bedtime
+    sequence:
+      - alias: bedtime lights low
+        service: light.turn_on
+        data:
+          entity_id: group.all_lights
+          brightness: 55
+          transition: 3
+      - delay:
+        minutes: 5
+      - alias: swith to sleeping scene
+        service: scene.turn_on
+        data:
+          entity_id: scene.bedtime

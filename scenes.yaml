@@ -1,0 +1,7 @@
+- name: sleeping
+  entities:
+    group.all_lights
+      state: off
+      transition: 3
+    switch.amcrest_cam
+      state: on
