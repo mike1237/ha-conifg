@@ -9,6 +9,8 @@ homeassistant:
   
 group: !include groups.yaml
 sensor: !include sensors.yaml
+scene: !include scenes.yaml
+script: !include scripts.yaml
 
 frontend:
 updater:
