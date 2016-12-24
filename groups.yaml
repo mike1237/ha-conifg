@@ -1,13 +1,13 @@
-default_view:
-  view: yes
-  entities:
-    #- device_tracker.stephie
-    - device_tracker.pi_md
-    - sensor.hall_multi_temp
-    - sensor.hall_multi_humiditiy
-    - alarm_control_panel.ha_alarm
-    - group.living_room
-    - persistent_notification.invalid_config
+#default_view:
+#  view: yes
+#  entities:
+#    #- device_tracker.stephie
+#    - device_tracker.pi_md
+#    - sensor.hall_multi_temp
+#    - sensor.hall_multi_humiditiy
+#    - alarm_control_panel.ha_alarm
+#    - group.living_room
+#    - persistent_notification.invalid_config
 
 mike_devices:
   entities:
